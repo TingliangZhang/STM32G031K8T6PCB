@@ -1,4 +1,218 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "STM32G031K8T6 PCB"
+Date "2021-01-06"
+Rev "V1"
+Comp "Tina"
+Comment1 "Tsinghua University"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM32G031K8:STM32G031K8T3 U1
+U 1 1 5FF2C556
+P 1900 1400
+F 0 "U1" H 3400 1787 60  0000 C CNN
+F 1 "STM32G031K8T3" H 3400 1681 60  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 3400 1640 60  0001 C CNN
+F 3 "" H 1900 1400 60  0000 C CNN
+	1    1900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J?
+U 1 1 5FF2F5D7
+P 2600 5100
+F 0 "J?" H 2157 5146 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 2157 5055 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 2600 5100 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 2250 3850 50  0001 C CNN
+	1    2600 5100
+	1    0    0    -1  
+$EndComp
+Text Label 3100 4800 0    50   ~ 0
+NRST
+Text Label 3100 5000 0    50   ~ 0
+SWCLK
+Text Label 3100 5100 0    50   ~ 0
+SWDIO
+Text Label 1900 2700 2    50   ~ 0
+SWDIO
+Text Label 1900 2800 2    50   ~ 0
+SWCLK
+Text Label 4900 2900 0    50   ~ 0
+NRST
+$Comp
+L power:VDD #PWR?
+U 1 1 5FF39B5D
+P 2600 4500
+F 0 "#PWR?" H 2600 4350 50  0001 C CNN
+F 1 "VDD" H 2615 4673 50  0000 C CNN
+F 2 "" H 2600 4500 50  0001 C CNN
+F 3 "" H 2600 4500 50  0001 C CNN
+	1    2600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF3A927
+P 2600 5850
+F 0 "#PWR?" H 2600 5600 50  0001 C CNN
+F 1 "GND" H 2605 5677 50  0000 C CNN
+F 2 "" H 2600 5850 50  0001 C CNN
+F 3 "" H 2600 5850 50  0001 C CNN
+	1    2600 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 5700 2600 5750
+Wire Wire Line
+	2500 5700 2500 5750
+Wire Wire Line
+	2500 5750 2600 5750
+Connection ~ 2600 5750
+Wire Wire Line
+	2600 5750 2600 5850
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5FF3C303
+P 4950 5200
+F 0 "SW?" H 4950 5485 50  0000 C CNN
+F 1 "SW_Push" H 4950 5394 50  0000 C CNN
+F 2 "" H 4950 5400 50  0001 C CNN
+F 3 "~" H 4950 5400 50  0001 C CNN
+	1    4950 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FF3F1B8
+P 4950 5550
+F 0 "C?" V 4698 5550 50  0000 C CNN
+F 1 "100nF" V 4789 5550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 5400 50  0001 C CNN
+F 3 "~" H 4950 5550 50  0001 C CNN
+	1    4950 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF40769
+P 5250 5700
+F 0 "#PWR?" H 5250 5450 50  0001 C CNN
+F 1 "GND" H 5255 5527 50  0000 C CNN
+F 2 "" H 5250 5700 50  0001 C CNN
+F 3 "" H 5250 5700 50  0001 C CNN
+	1    5250 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5200 5250 5200
+Wire Wire Line
+	5250 5200 5250 5550
+Wire Wire Line
+	5100 5550 5250 5550
+Connection ~ 5250 5550
+Wire Wire Line
+	5250 5550 5250 5700
+Wire Wire Line
+	4750 5200 4650 5200
+Text Label 4550 5200 2    50   ~ 0
+NRST
+Wire Wire Line
+	4650 5200 4650 5550
+Wire Wire Line
+	4650 5550 4800 5550
+Connection ~ 4650 5200
+Wire Wire Line
+	4650 5200 4550 5200
+$Comp
+L power:VDD #PWR?
+U 1 1 5FF423A2
+P 4900 3100
+F 0 "#PWR?" H 4900 2950 50  0001 C CNN
+F 1 "VDD" V 4915 3228 50  0000 L CNN
+F 2 "" H 4900 3100 50  0001 C CNN
+F 3 "" H 4900 3100 50  0001 C CNN
+	1    4900 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF4301E
+P 1900 3100
+F 0 "#PWR?" H 1900 2850 50  0001 C CNN
+F 1 "GND" V 1905 2972 50  0000 R CNN
+F 2 "" H 1900 3100 50  0001 C CNN
+F 3 "" H 1900 3100 50  0001 C CNN
+	1    1900 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FF43E0A
+P 4950 4400
+F 0 "C?" V 4698 4400 50  0000 C CNN
+F 1 "100nF" V 4789 4400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 4250 50  0001 C CNN
+F 3 "~" H 4950 4400 50  0001 C CNN
+	1    4950 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FF45160
+P 4950 3950
+F 0 "C?" V 4698 3950 50  0000 C CNN
+F 1 "4.7uF" V 4789 3950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 3800 50  0001 C CNN
+F 3 "~" H 4950 3950 50  0001 C CNN
+	1    4950 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5FF4566F
+P 5250 3800
+F 0 "#PWR?" H 5250 3650 50  0001 C CNN
+F 1 "VDD" H 5265 3973 50  0000 C CNN
+F 2 "" H 5250 3800 50  0001 C CNN
+F 3 "" H 5250 3800 50  0001 C CNN
+	1    5250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF463EC
+P 4650 4550
+F 0 "#PWR?" H 4650 4300 50  0001 C CNN
+F 1 "GND" H 4655 4377 50  0000 C CNN
+F 2 "" H 4650 4550 50  0001 C CNN
+F 3 "" H 4650 4550 50  0001 C CNN
+	1    4650 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3950 4650 3950
+Wire Wire Line
+	4650 3950 4650 4400
+Wire Wire Line
+	5100 4400 5250 4400
+Wire Wire Line
+	5250 4400 5250 3950
+Wire Wire Line
+	5100 3950 5250 3950
+Connection ~ 5250 3950
+Wire Wire Line
+	5250 3950 5250 3800
+Wire Wire Line
+	4800 4400 4650 4400
+Connection ~ 4650 4400
+Wire Wire Line
+	4650 4400 4650 4550
 $EndSCHEMATC
