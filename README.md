@@ -22,3 +22,9 @@ $$
 [STLINK-V3MINI](https://www.st.com/en/development-tools/stlink-v3mini.html)
 
 开发板上接口为STDC14 2x7 1.27mm排母
+
+[ST-LINK/V2 ](https://www.st.com/en/development-tools/st-link-v2.html)
+
+Target connection(SWD) 
+
+20-pin JTAG 2x10 2.54mm 排针
