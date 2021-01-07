@@ -4,3 +4,6 @@ STM32G031/STM32G031-cache.lib
 STM32G031/sym-lib-table
 STM32G031/fp-info-cache
 *.kicad_pcb-bak
+*.gbr
+*.drl
+*.gbrjob
